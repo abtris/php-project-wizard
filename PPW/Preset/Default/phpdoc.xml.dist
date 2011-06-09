@@ -1,6 +1,0 @@
- <target name="phpdoc" description="Generate API documentation using PHPDocumentor">
-  <exec executable="phpdoc">
-   <arg line="--directory ${source}
-              --target    ${basedir}/build/api" />
-  </exec>
- </target>

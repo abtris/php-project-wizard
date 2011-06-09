@@ -51,12 +51,6 @@ function ppw_autoload($class)
 
     if ($classes === NULL) {
         $classes = array(
-          'ppw_preset' => '/Preset.php',
-          'ppw_preset_default' => '/Preset/Default.php',
-          'ppw_preset_zend' => '/Preset/Zend.php',
-          'ppw_processor' => '/Processor.php',
-          'ppw_processor_ant' => '/Processor/Ant.php',
-          'ppw_processor_phpunit' => '/Processor/PHPUnit.php',
           'ppw_textui_command' => '/TextUI/Command.php'
         );
 

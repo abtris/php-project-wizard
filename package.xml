@@ -17,10 +17,10 @@
   <email>sb@sebastian-bergmann.de</email>
   <active>yes</active>
  </lead>
- <date>2011-02-22</date>
+ <date>2011-MM-DD</date>
  <version>
-  <release>1.0.3</release>
-  <api>1.0.0</api>
+  <release>1.1.0</release>
+  <api>1.1.0</api>
  </version>
  <stability>
   <release>stable</release>
@@ -31,28 +31,12 @@
  <contents>
   <dir name="/">
    <dir name="PPW">
-    <dir name="Processor">
-     <dir name="Template">
-      <file baseinstalldir="/" name="build.xml.dist" role="php" />
-      <file baseinstalldir="/" name="phpdoc.xml.dist" role="php" />
-      <file baseinstalldir="/" name="phpunit.xml.dist" role="php" />
-     </dir>
-     <file baseinstalldir="/" name="Ant.php" role="php">
-      <tasks:replace from="@package_version@" to="version" type="package-info" />
-     </file>
-     <file baseinstalldir="/" name="PHPUnit.php" role="php">
-      <tasks:replace from="@package_version@" to="version" type="package-info" />
-     </file>
-    </dir>
     <dir name="TextUI">
      <file baseinstalldir="/" name="Command.php" role="php">
       <tasks:replace from="@package_version@" to="version" type="package-info" />
      </file>
     </dir>
     <file baseinstalldir="/" name="Autoload.php" role="php">
-     <tasks:replace from="@package_version@" to="version" type="package-info" />
-    </file>
-    <file baseinstalldir="/" name="Processor.php" role="php">
      <tasks:replace from="@package_version@" to="version" type="package-info" />
     </file>
    </dir>
