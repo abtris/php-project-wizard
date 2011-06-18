@@ -247,22 +247,18 @@ class PPW_TextUI_Command
         print <<<EOT
 Usage: ppw [switches] <directory>
 
-  Mandatory switches
+  --name <name>           Name of the project
 
-    --name <name>         Name of the project
+  --source <directory>    Directory with the project's sources (default: src)
+  --tests <directory>     Directory with the project's tests (default: tests)
+  For multiple directories use a comma separated list
 
-  Optional switches
+  --bootstrap <script>    PHPUnit bootstrap script (default: tests/autoload.php)
+  --phpcs <ruleset>       Ruleset for PHP_CodeSniffer (default: build/phpcs.xml)
+  --phpmd <ruleset>       Ruleset(s) for PHPMD (default: build/phpmd.xml)
 
-    --source <directory>  Directory with the project's sources (default: src)
-    --tests <directory>   Directory with the project's tests (default: tests)
-    For multiple directories use a comma seperated list
-
-    --bootstrap <script>  PHPUnit bootstrap script (default: tests/autoload.php)
-    --phpcs <ruleset>     Ruleset for PHP_CodeSniffer (default: build/phpcs.xml)
-    --phpmd <ruleset>     Ruleset(s) for PHPMD (default: build/phpmd.xml)
-
-    --disable-apidoc      Do not include API documentation in the build script.
-    --disable-phpab       Do not include PHPAB in the build script.
+  --disable-apidoc        Do not include API documentation in the build script
+  --disable-phpab         Do not include PHPAB in the build script
 
   --force                 Overwrite existing files
 
