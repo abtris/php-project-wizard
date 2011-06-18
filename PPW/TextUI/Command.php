@@ -219,6 +219,7 @@ class PPW_TextUI_Command
         $phpcs           = $input->getOption('phpcs')->value;
         $phpmd           = $input->getOption('phpmd')->value;
         $force           = $input->getOption('force')->value;
+        $apiDocTool      = $input->getOption('apidoc-tool')->value;
         $disableApiDoc   = $input->getOption('disable-apidoc')->value;
         $disableAutoload = $input->getOption('disable-autoload')->value;
 
