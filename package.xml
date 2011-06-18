@@ -46,6 +46,12 @@
       <file baseinstalldir="/" name="src_autoload.php.in" role="php" />
       <file baseinstalldir="/" name="tests_autoload.php.in" role="php" />
      </dir>
+     <dir name="PHPCS">
+      <file baseinstalldir="/" name="phpcs.xml" role="php" />
+     </dir>
+     <dir name="PHPMD">
+      <file baseinstalldir="/" name="phpmd.xml" role="php" />
+     </dir>
      <file baseinstalldir="/" name="PDEPEND.php" role="php">
       <tasks:replace from="@package_version@" to="version" type="package-info" />
      </file>
