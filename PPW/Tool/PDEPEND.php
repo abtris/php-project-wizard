@@ -51,7 +51,7 @@
  * @link      http://github.com/sebastianbergmann/php-project-wizard/tree
  * @since     Class available since Release 1.1.0
  */
-class PPW_Tool_PDEPEND implements PPW_Buildable_Ant
+class PPW_Tool_PDEPEND extends PPW_Buildable_Ant
 {
     /**
      * @return string

@@ -49,8 +49,15 @@
  * @license   http://www.opensource.org/licenses/bsd-license.php  BSD License
  * @version   Release: @package_version@
  * @link      http://github.com/sebastianbergmann/php-project-wizard/tree
- * @since     Interface available since Release 1.1.0
+ * @since     Class available since Release 1.1.0
  */
-interface PPW_Buildable
+abstract class PPW_Buildable
 {
+    /**
+     * @return array
+     */
+    public function getFiles()
+    {
+        return array();
+    }
 }

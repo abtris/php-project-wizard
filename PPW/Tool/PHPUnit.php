@@ -51,7 +51,7 @@
  * @link      http://github.com/sebastianbergmann/php-project-wizard/tree
  * @since     Class available since Release 1.1.0
  */
-class PPW_Tool_PHPUnit implements PPW_Buildable_Ant
+class PPW_Tool_PHPUnit extends PPW_Buildable_Ant
 {
     /**
      * @return string
