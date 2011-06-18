@@ -55,6 +55,9 @@
      <file baseinstalldir="/" name="PHPCB.php" role="php">
       <tasks:replace from="@package_version@" to="version" type="package-info" />
      </file>
+     <file baseinstalldir="/" name="PHPCS.php" role="php">
+      <tasks:replace from="@package_version@" to="version" type="package-info" />
+     </file>
      <file baseinstalldir="/" name="PHPCPD.php" role="php">
       <tasks:replace from="@package_version@" to="version" type="package-info" />
      </file>
