@@ -1,0 +1,18 @@
+<?php
+function ___AUTOLOAD___($class) {
+    static $classes = NULL;
+
+    if ($classes === NULL) {
+        $classes = array(
+          ___CLASSLIST___
+        );
+    }
+
+    $cn = strtolower($class);
+
+    if (isset($classes[$cn])) {
+        require ___BASEDIR___$classes[$cn];
+    }
+}
+
+spl_autoload_register('___AUTOLOAD___');

@@ -42,6 +42,10 @@
      </file>
     </dir>
     <dir name="Tool">
+     <dir name="PHPAB">
+      <file baseinstalldir="/" name="src_autoload.php.in" role="php" />
+      <file baseinstalldir="/" name="tests_autoload.php.in" role="php" />
+     </dir>
      <file baseinstalldir="/" name="PDEPEND.php" role="php">
       <tasks:replace from="@package_version@" to="version" type="package-info" />
      </file>
