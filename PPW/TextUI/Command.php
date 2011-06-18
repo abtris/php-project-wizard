@@ -99,7 +99,8 @@ class PPW_TextUI_Command
           new ezcConsoleOption(
             '',
             'bootstrap',
-            ezcConsoleInput::TYPE_STRING
+            ezcConsoleInput::TYPE_STRING,
+            'tests/autoload.php'
            )
         );
 
@@ -256,7 +257,7 @@ Usage: ppw [switches] <directory>
     --tests <directory>   Directory with the project's tests (default: tests)
     For multiple directories use a comma seperated list
 
-    --bootstrap <script>  Bootstrap script for testsuite
+    --bootstrap <script>  PHPUnit bootstrap script (default: tests/autoload.php)
     --phpcs <ruleset>     Ruleset for PHP_CodeSniffer (default: build/phpcs.xml)
     --phpmd <ruleset>     Ruleset(s) for PHPMD (default: build/phpmd.xml)
 
