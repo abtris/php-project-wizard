@@ -133,6 +133,15 @@ class PPW_TextUI_Command
         $input->registerOption(
           new ezcConsoleOption(
             '',
+            'apidoc-tool',
+            ezcConsoleInput::TYPE_STRING,
+            'phpdox'
+           )
+        );
+
+        $input->registerOption(
+          new ezcConsoleOption(
+            '',
             'disable-apidoc',
             ezcConsoleInput::TYPE_NONE
            )
@@ -256,6 +265,9 @@ Usage: ppw [switches] <directory>
   --bootstrap <script>    PHPUnit bootstrap script (default: tests/autoload.php)
   --phpcs <ruleset>       Ruleset for PHP_CodeSniffer (default: build/phpcs.xml)
   --phpmd <ruleset>       Ruleset(s) for PHPMD (default: build/phpmd.xml)
+
+  --apidoc-tool <tool>    Tool to use for API documentation (default: phpdox)
+  Possible values are "phpdoc", "phpdox"
 
   --disable-apidoc        Do not include API documentation in the build script
   --disable-phpab         Do not include PHPAB in the build script
