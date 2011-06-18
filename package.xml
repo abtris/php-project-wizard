@@ -57,6 +57,9 @@
      <file baseinstalldir="/" name="PHPDOC.php" role="php">
       <tasks:replace from="@package_version@" to="version" type="package-info" />
      </file>
+     <file baseinstalldir="/" name="PHPDOX.php" role="php">
+      <tasks:replace from="@package_version@" to="version" type="package-info" />
+     </file>
      <file baseinstalldir="/" name="PHPLOC.php" role="php">
       <tasks:replace from="@package_version@" to="version" type="package-info" />
      </file>
