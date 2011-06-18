@@ -131,6 +131,22 @@ class PPW_TextUI_Command
 
         $input->registerOption(
           new ezcConsoleOption(
+            '',
+            'disable-apidoc',
+            ezcConsoleInput::TYPE_NONE
+           )
+        );
+
+        $input->registerOption(
+          new ezcConsoleOption(
+            '',
+            'disable-phpab',
+            ezcConsoleInput::TYPE_NONE
+           )
+        );
+
+        $input->registerOption(
+          new ezcConsoleOption(
             'h',
             'help',
             ezcConsoleInput::TYPE_NONE,
@@ -185,14 +201,16 @@ class PPW_TextUI_Command
             exit(0);
         }
 
-        $arguments = $input->getArguments();
-        $name      = $input->getOption('name')->value;
-        $source    = $input->getOption('source')->value;
-        $tests     = $input->getOption('tests')->value;
-        $bootstrap = $input->getOption('bootstrap')->value;
-        $phpcs     = $input->getOption('phpcs')->value;
-        $phpmd     = $input->getOption('phpmd')->value;
-        $force     = $input->getOption('force')->value;
+        $arguments       = $input->getArguments();
+        $name            = $input->getOption('name')->value;
+        $source          = $input->getOption('source')->value;
+        $tests           = $input->getOption('tests')->value;
+        $bootstrap       = $input->getOption('bootstrap')->value;
+        $phpcs           = $input->getOption('phpcs')->value;
+        $phpmd           = $input->getOption('phpmd')->value;
+        $force           = $input->getOption('force')->value;
+        $disableApiDoc   = $input->getOption('disable-apidoc')->value;
+        $disableAutoload = $input->getOption('disable-autoload')->value;
 
         if (!is_dir($source)) {
             mkdir($source, 0777, TRUE);
@@ -241,6 +259,9 @@ Usage: ppw [switches] <directory>
     --bootstrap <script>  Bootstrap script for testsuite
     --phpcs <ruleset>     Ruleset for PHP_CodeSniffer (default: build/phpcs.xml)
     --phpmd <ruleset>     Ruleset(s) for PHPMD (default: build/phpmd.xml)
+
+    --disable-apidoc      Do not include API documentation in the build script.
+    --disable-phpab       Do not include PHPAB in the build script.
 
   --force                 Overwrite existing files
 
