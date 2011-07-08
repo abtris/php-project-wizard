@@ -53,4 +53,16 @@
  */
 abstract class PPW_Builder
 {
+    /**
+     * @var PPW_Buildable[]
+     */
+    protected $tools = array();
+
+    /**
+     * @param PPW_Buildable $buildable
+     */
+    public function addTool(PPW_Buildable $buildable)
+    {
+        $this->tools[] = $buildable;
+    }
 }
