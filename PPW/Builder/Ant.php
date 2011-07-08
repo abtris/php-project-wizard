@@ -38,45 +38,19 @@
  * @author    Sebastian Bergmann <sb@sebastian-bergmann.de>
  * @copyright 2011 Sebastian Bergmann <sb@sebastian-bergmann.de>
  * @license   http://www.opensource.org/licenses/bsd-license.php  BSD License
- * @since     File available since Release 1.0.0
+ * @since     File available since Release 1.1.0
  */
 
-require_once 'Text/Template/Autoload.php';
-require_once 'ezc/Base/base.php';
-
-function ppw_autoload($class)
+/**
+ * ...
+ *
+ * @author    Sebastian Bergmann <sb@sebastian-bergmann.de>
+ * @copyright 2011 Sebastian Bergmann <sb@sebastian-bergmann.de>
+ * @license   http://www.opensource.org/licenses/bsd-license.php  BSD License
+ * @version   Release: @package_version@
+ * @link      http://github.com/sebastianbergmann/php-project-wizard/tree
+ * @since     Class available since Release 1.1.0
+ */
+class PPW_Builder_Ant extends PPW_Builder
 {
-    static $classes = NULL;
-    static $path    = NULL;
-
-    if ($classes === NULL) {
-        $classes = array(
-          'ppw_buildable' => '/Buildable.php',
-          'ppw_buildable_ant' => '/Buildable/Ant.php',
-          'ppw_builder' => '/Builder.php',
-          'ppw_builder_ant' => '/Builder/Ant.php',
-          'ppw_textui_command' => '/TextUI/Command.php',
-          'ppw_tool_pdepend' => '/Tool/PDEPEND.php',
-          'ppw_tool_phpab' => '/Tool/PHPAB.php',
-          'ppw_tool_phpcb' => '/Tool/PHPCB.php',
-          'ppw_tool_phpcpd' => '/Tool/PHPCPD.php',
-          'ppw_tool_phpcs' => '/Tool/PHPCS.php',
-          'ppw_tool_phpdoc' => '/Tool/PHPDOC.php',
-          'ppw_tool_phpdox' => '/Tool/PHPDOX.php',
-          'ppw_tool_phploc' => '/Tool/PHPLOC.php',
-          'ppw_tool_phpmd' => '/Tool/PHPMD.php',
-          'ppw_tool_phpunit' => '/Tool/PHPUnit.php'
-        );
-
-        $path = dirname(__FILE__);
-    }
-
-    $cn = strtolower($class);
-
-    if (isset($classes[$cn])) {
-        require $path . $classes[$cn];
-    }
 }
-
-spl_autoload_register('ppw_autoload');
-spl_autoload_register(array('ezcBase', 'autoload'));

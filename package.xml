@@ -41,6 +41,11 @@
       <tasks:replace from="@package_version@" to="version" type="package-info" />
      </file>
     </dir>
+    <dir name="Builder">
+     <file baseinstalldir="/" name="Ant.php" role="php">
+      <tasks:replace from="@package_version@" to="version" type="package-info" />
+     </file>
+    </dir>
     <dir name="Tool">
      <dir name="PHPAB">
       <file baseinstalldir="/" name="src_autoload.php.in" role="php" />
@@ -87,6 +92,9 @@
      <tasks:replace from="@package_version@" to="version" type="package-info" />
     </file>
      <file baseinstalldir="/" name="Buildable.php" role="php">
+      <tasks:replace from="@package_version@" to="version" type="package-info" />
+     </file>
+     <file baseinstalldir="/" name="Builder.php" role="php">
       <tasks:replace from="@package_version@" to="version" type="package-info" />
      </file>
    </dir>
