@@ -52,6 +52,7 @@ function ppw_autoload($class)
     if ($classes === NULL) {
         $classes = array(
           'ppw_buildable' => '/Buildable.php',
+          'ppw_buildable_ant' => '/Buildable/Ant.php',
           'ppw_textui_command' => '/TextUI/Command.php',
           'ppw_tool_pdepend' => '/Tool/PDEPEND.php',
           'ppw_tool_phpab' => '/Tool/PHPAB.php',
