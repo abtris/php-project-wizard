@@ -91,12 +91,12 @@
     <file baseinstalldir="/" name="Autoload.php" role="php">
      <tasks:replace from="@package_version@" to="version" type="package-info" />
     </file>
-     <file baseinstalldir="/" name="Buildable.php" role="php">
-      <tasks:replace from="@package_version@" to="version" type="package-info" />
-     </file>
-     <file baseinstalldir="/" name="Builder.php" role="php">
-      <tasks:replace from="@package_version@" to="version" type="package-info" />
-     </file>
+    <file baseinstalldir="/" name="Buildable.php" role="php">
+     <tasks:replace from="@package_version@" to="version" type="package-info" />
+    </file>
+    <file baseinstalldir="/" name="Builder.php" role="php">
+     <tasks:replace from="@package_version@" to="version" type="package-info" />
+    </file>
    </dir>
    <file baseinstalldir="/" name="ppw.php" role="script">
     <tasks:replace from="/usr/bin/env php" to="php_bin" type="pear-config"/>
