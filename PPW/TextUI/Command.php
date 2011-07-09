@@ -255,7 +255,7 @@ class PPW_TextUI_Command
         self::printVersionString();
 
         print <<<EOT
-Usage: ppw [switches] <directory>
+Usage: ppw [switches] [<directory>]
 
   --name <name>           Name of the project
 
